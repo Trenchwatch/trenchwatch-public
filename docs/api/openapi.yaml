@@ -3,14 +3,14 @@ info:
   title: Trenchwatch API
   version: "2026-10"
   description: >
-    Real-time launch-risk alerts for Solana token launches, with on-chain evidence. "operator" in field names is the v1 identifier for a group of addresses seen across repeat launches.
+    Real-time signals on Solana token launches whose early buying comes from linked, coordinated wallets rather than organic demand.
     Alerts are probabilistic observations based on public on-chain data; they describe addresses and
     patterns, not people, and are not financial advice. See docs/api/README.md for the webhook contract.
 servers:
-  - url: https://api.[DOMAIN]/v1
-    description: Production (tw_live_ keys)
-  - url: https://sandbox.api.[DOMAIN]/v1
-    description: Sandbox with synthetic data (tw_test_ keys)
+  - url: https://sandbox-api.trenchwatch.dev/v1
+    description: Sandbox with synthetic data (tw_test_ keys, available now)
+  - url: https://api.trenchwatch.dev/v1
+    description: Production (tw_live_ keys, licensed partners)
 security:
   - ApiKey: []
 paths:
@@ -39,7 +39,7 @@ paths:
         "429": {$ref: "#/components/responses/Error"}
   /operator/{address}:
     get:
-      summary: Whether an address is part of a known address group
+      summary: Whether an address is a registry entry or one of the wallets linked to it
       parameters:
         - {name: address, in: path, required: true, schema: {type: string}}
       responses:

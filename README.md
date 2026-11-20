@@ -6,7 +6,7 @@
 
 **Real-time launch-risk alerts for Solana launchpads, with the on-chain evidence behind every alert.**
 
-Every day, around 41,700 tokens launch on Solana's major launchpads. A meaningful share come from repeat, serial creators, and their early demand often arrives within the first seconds. Trenchwatch reads every new launch on five major Solana launchpads as it happens and sends platforms an alert, with the on-chain evidence, within seconds. Platforms decide what to do with it: label a token, warn users before they buy, or review a listing.
+Every day, around 41,700 tokens launch on Solana's major launchpads. A meaningful share come from repeat creators, and their early demand often arrives within the first seconds. Trenchwatch reads every new launch on five major Solana launchpads as it happens and sends platforms an alert, with the on-chain evidence, within seconds. Platforms decide what to do with it: label a token, warn users before they buy, or review a listing.
 
 > This repository is the public overview of Trenchwatch: what it does, how to integrate it and how to work with us. The detection engine is proprietary and is not published here.
 
@@ -71,7 +71,7 @@ Alerts follow **Solana Launch Alerts**, an open, MIT-licensed standard for launc
 - **[API documentation](docs/api/README.md)**
 - **[OpenAPI specification](docs/api/openapi.yaml)**
 
-Sandbox access is available on request.
+Sandbox: `https://sandbox-api.trenchwatch.dev/v1/health` (synthetic data; test keys on request at info@trenchwatch.dev).
 
 ## Who it is for
 
